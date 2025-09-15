@@ -1,7 +1,14 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div class = "content-container">
   <app-customer-details></app-customer-details>
   <app-product-details></app-product-details>
   <app-cart-details></app-cart-details>
+</div>
+<router-outlet></router-outlet> -->
+<app-navbar></app-navbar>
+<div class="content-container">
+  <app-customer-details></app-customer-details>
+  <!-- <app-product-details *ngIf="showProductDetails"></app-product-details> -->
+  <app-cart-details (addItem)="showProductDetails = true"></app-cart-details>
 </div>
 <router-outlet></router-outlet>

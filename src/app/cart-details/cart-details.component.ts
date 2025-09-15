@@ -1,6 +1,8 @@
 import { Component, Input} from '@angular/core';
 import { MatCardTitle, MatCardModule } from "@angular/material/card";
 import { MatTableModule } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 export interface CartItem{
   productName : string;
@@ -9,6 +11,7 @@ export interface CartItem{
   total: number;
 } 
 
+
 @Component({
   selector: 'app-cart-details',
   imports: [MatCardTitle, MatCardModule, MatTableModule],
@@ -16,6 +19,8 @@ export interface CartItem{
   styleUrl: './cart-details.component.css'
 })
 export class CartDetailsComponent {
+
+  constructor(private dialog: MatDialog) {}
   cartItems: CartItem[] = [
     { productName: 'Apple', price: 30, quantity: 2, total: 60 },
     { productName: 'Banana', price: 10, quantity: 5, total: 50 },
@@ -23,4 +28,17 @@ export class CartDetailsComponent {
   ];
 
   displayedColumns: string[] = ['productName', 'price', 'quantity', 'total'];
+
+    // ...existing code...
+  onAddItem() {
+  this.dialog.open(ProductDetailsComponent, {
+    width: '1200px' // or any desired width, e.g. '50vw'
+  }).afterClosed().subscribe((item: CartItem | undefined) => {
+    if (item) {
+      this.cartItems.push(item);
+      this.cartItems = [...this.cartItems]; // refresh table data
+    }
+  });
+}
+  // ...existing code...
 }

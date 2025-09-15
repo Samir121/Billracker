@@ -1,21 +1,23 @@
-.form-wrapper {
-  display: flex;
+/* .form-wrapper { */
+  /* display: flex;
   justify-content: center;
   align-items: center;
   min-height: 25vh;
-  background: #ffffff;
-}
-
+  background: #ffffff; */
+  /* padding: 16px; */
+/* } */
+/* 
 .product-card {
   width: 95%;
-  max-width: 1200px;
+  max-width: 380px;
+  margin: 0 auto;
   padding: 10px;
 }
 
 .card-title {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 20px; /* 👈 space between title and inputs */
+  margin-bottom: 20px;
 }
 
 .product-form {
@@ -27,21 +29,42 @@
 .form-row {
   display: flex;
   gap: 16px;
-  flex-wrap: nowrap; /* keeps all fields in one row */
+  flex-wrap: nowrap; 
 }
 
 .field {
-  flex: 1; /* equal space for all fields */
+  flex: 1; 
   min-width: 200px;
 }
-
+*/
 .add-btn {
-    text-align: center;
-    align-items: center;
-  height: 100%;        /* same height as mat-form-field */
+  text-align: center;
+  align-items: center;
+  height: 100%;        
   padding: 0 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   font-weight: 600;
   font-size: 16px;
+} 
+
+
+/* product-dialog.component.css */
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.field {
+  flex: 1 1 45%; /* each field takes ~45% width */
+  min-width: 150px;
+}
+
+mat-dialog-content {
+  overflow: hidden !important; /* remove scroll */
+}
+
+mat-dialog-actions {
+  padding: 8px 16px;
 }

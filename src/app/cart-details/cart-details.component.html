@@ -10,6 +10,10 @@
   <mat-card class="card">
     <mat-card-title class = "title">Cart</mat-card-title>
       <mat-card-content>
+       <button mat-raised-button color="primary" class="add-btn"  (click)="onAddItem()">
+            Add item
+        </button>
+        
         <table mat-table [dataSource]="cartItems" class="mat-elevation-z8 full-width-table">
 
           <!-- Product Name Column -->
