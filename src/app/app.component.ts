@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { CustomerDetailsComponent } from "./customer-details/customer-details.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
-import { CartItem } from './cart-details/cart-details.component';
+import { CartItem } from "./cart-details/cart-details.component";
+import { CartDetailsComponent } from './cart-details/cart-details.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CustomerDetailsComponent, ProductDetailsComponent],
+  imports: [RouterOutlet, NavbarComponent, CustomerDetailsComponent, ProductDetailsComponent,CartDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   template: `
