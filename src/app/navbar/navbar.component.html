@@ -1,0 +1,27 @@
+<mat-toolbar color="warm" class="custom-toolbar">
+  <!-- Logo / Title -->
+  <span class="app-title">Billracker</span>
+
+  <!-- Spacer pushes items to right -->
+  <span class="spacer"></span>
+
+  <!-- Actions -->
+  <button mat-button>Dashboard</button>
+  <button mat-button>Invoices</button>
+  <button mat-button>Clients</button>
+
+  <!-- Profile Menu -->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Settings</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

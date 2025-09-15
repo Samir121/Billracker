@@ -1,0 +1,42 @@
+<div class="form-wrapper">
+  <mat-card class="customer-card">
+    <mat-card-title class="card-title">Customer Details</mat-card-title>
+    <mat-card-content>
+      <form class="customer-form">
+
+        <!-- All fields in a single horizontal row -->
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Customer Name</mat-label>
+            <input matInput placeholder="Enter customer name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput type="tel" placeholder="Enter mobile number">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Enter address">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>Customer Type</mat-label>
+            <mat-select [(value)]="customerType" name="customerType">
+              <mat-option value="retail">Retail</mat-option>
+              <mat-option value="wholesale">Wholesale</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Buttons
+        <div class="button-row">
+          <button mat-raised-button color="primary">Save</button>
+          <button mat-raised-button color="warn">Cancel</button>
+        </div> -->
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

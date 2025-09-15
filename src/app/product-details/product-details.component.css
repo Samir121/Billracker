@@ -1,0 +1,47 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  background: #ffffff;
+}
+
+.product-card {
+  width: 95%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px; /* 👈 space between title and inputs */
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap; /* keeps all fields in one row */
+}
+
+.field {
+  flex: 1; /* equal space for all fields */
+  min-width: 200px;
+}
+
+.add-btn {
+    text-align: center;
+    align-items: center;
+  height: 100%;        /* same height as mat-form-field */
+  padding: 0 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+}

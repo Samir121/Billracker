@@ -1,0 +1,42 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  background: #ffffff;
+}
+
+.customer-card {
+  width: 95%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px; /* 👈 space between title and inputs */
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap; /* keeps all fields in one row */
+}
+
+.field {
+  flex: 1; /* equal space for all fields */
+  min-width: 200px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

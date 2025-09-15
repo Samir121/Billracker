@@ -1,0 +1,13 @@
+.app-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.custom-toolbar {
+  background-color: #688aab; /* Dark Blue */
+  color: white; /* Text color */
+}
