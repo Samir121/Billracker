@@ -31,14 +31,19 @@ export class CartDetailsComponent {
 
     // ...existing code...
   onAddItem() {
-  this.dialog.open(ProductDetailsComponent, {
-    width: '1200px' // or any desired width, e.g. '50vw'
-  }).afterClosed().subscribe((item: CartItem | undefined) => {
+    this.dialog.open(ProductDetailsComponent, {
+      width: '1200px' // or any desired width, e.g. '50vw'
+    }).afterClosed().subscribe((item: CartItem | undefined) => {
     if (item) {
       this.cartItems.push(item);
       this.cartItems = [...this.cartItems]; // refresh table data
     }
-  });
-}
+    });
+  }
+  // ...existing code...
+  getTotalPrice(): number {
+    return this.cartItems.reduce((sum, item) => sum + item.total, 0);
+  }
+// ...existing code...
   // ...existing code...
 }
