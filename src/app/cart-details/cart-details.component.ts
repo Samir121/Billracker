@@ -16,7 +16,11 @@ export interface CartItem{
   styleUrl: './cart-details.component.css'
 })
 export class CartDetailsComponent {
-  @Input() cartItems: CartItem[] = [];
+  cartItems: CartItem[] = [
+    { productName: 'Apple', price: 30, quantity: 2, total: 60 },
+    { productName: 'Banana', price: 10, quantity: 5, total: 50 },
+    { productName: 'Orange', price: 20, quantity: 3, total: 60 }
+  ];
 
   displayedColumns: string[] = ['productName', 'price', 'quantity', 'total'];
 }

@@ -12,7 +12,7 @@
   padding: 10px;
 }
 
-.card-title {
+.customer-detail-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px; /* 👈 space between title and inputs */

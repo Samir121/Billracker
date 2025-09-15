@@ -2,3 +2,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  background: #ffffff;
+}
+
+.card {
+  width: 95%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px; /* 👈 space between title and inputs */
+}
