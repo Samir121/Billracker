@@ -17,12 +17,13 @@
       <input matInput type="number" placeholder="Enter quantity" [(ngModel)]="quantity" name="quantity">
     </mat-form-field>
   </form>
+  <mat-dialog-actions class="mov-btn">
+    <button class= "add-btn" mat-raised-button color="warm" (click)="onClose()">Close</button>
+    <button class= "add-btn" mat-raised-button color="warm" (click)="onAdd()">Add</button>
+  </mat-dialog-actions>
 </mat-dialog-content>
 
-<mat-dialog-actions  >
-  <button class= "add-btn" mat-raised-button color="warn" (click)="onClose()"  >Close</button>
-  <button class= "add-btn" mat-raised-button color="primary" (click)="onAdd()">Add</button>
-</mat-dialog-actions>
+
 
 <!-- <div class="form-wrapper">
   <mat-card class="product-card">

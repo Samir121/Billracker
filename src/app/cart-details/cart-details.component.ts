@@ -32,7 +32,8 @@ export class CartDetailsComponent {
     // ...existing code...
   onAddItem() {
     this.dialog.open(ProductDetailsComponent, {
-      width: '1200px' // or any desired width, e.g. '50vw'
+      width: '1200px', // or any desired width, e.g. '50vw'
+      height: '38vh'
     }).afterClosed().subscribe((item: CartItem | undefined) => {
     if (item) {
       this.cartItems.push(item);
